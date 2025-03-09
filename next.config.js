@@ -4,7 +4,7 @@
  
 const nextConfig = {
   output: 'export',
-  distDir: 'dist',
+  distDir: 'out',
   // basePath: "",
   assetPrefix: "./",
   images: { unoptimized: true }
