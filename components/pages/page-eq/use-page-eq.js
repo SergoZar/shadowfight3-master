@@ -332,7 +332,9 @@ export function usePageEq() {
         setPerksLists((last) => ({ ...last, all: [].concat(perksLists.helm, perksLists.armor, perksLists.weapon) }))
     }, [perksLists.helm, perksLists.armor, perksLists.weapon])
 
-    let [currentBuildType, setCurrentBuildType] = useState(BUILD_TYPE_PERKS_AND_EQUIPMENT);
+    //let [currentBuildType, setCurrentBuildType] = useState(BUILD_TYPE_PERKS_AND_EQUIPMENT);
+    
+    let [currentBuildType, setCurrentBuildType] = useState(BUILD_TYPE_ONLY_PERKS);
 
 
     const selectBuildType = (type) => {
