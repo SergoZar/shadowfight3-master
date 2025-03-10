@@ -5,7 +5,7 @@
 const nextConfig = {
   output: 'export',
   distDir: 'out',
-  // basePath: "",
+  basePath: "shadowfight3-master",
   //assetPrefix: "./",
   images: { unoptimized: true }
 }
