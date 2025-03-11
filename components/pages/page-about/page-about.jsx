@@ -5,8 +5,9 @@ export function PageAbout(){
             <h3>Сайт чтобы делится сборками перков</h3>
             <hr/>
             <p>Author: SergoZar</p>
+            <p>Donation: ...</p>
             <p>
-                Repo(Please put a star(: ): <a href="https://github.com/SergoZar/shadowfight3-test">https://github.com/SergoZar/shadowfight3-test</a>
+                Repo(Please put a star(: ): <a href="https://github.com/SergoZar/shadowfight3-master">https://github.com/SergoZar/shadowfight3-test</a>
             </p>
             <p>
                 Github:<a href="https://github.com/sergozar">https://github.com/sergozar</a>
@@ -20,6 +21,7 @@ export function PageAbout(){
             <p>
                 Reddit: <a href="https://www.reddit.com/user/SergoZar">https://www.reddit.com/user/SergoZar/</a>
             </p>
+
             <hr/>
             <h3>Планы на будущее</h3>
             <div>

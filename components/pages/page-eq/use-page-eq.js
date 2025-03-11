@@ -170,6 +170,7 @@ export function usePageEq() {
         if (ids.length === 0) return true;
         return getPerkById(ids[0]).fraction === getPerkById(id).fraction;
     }
+
     const sumisnistWorker = (id, slot, type) =>{
         let sumisnist = checkAllItemsInSlotSumisnist(slot, type, id, perksLists, equipmentData)
         if (!sumisnist || (type === CARD_TYPE_PERK && !isPerksFractionOne(id, slot))) {
@@ -178,9 +179,8 @@ export function usePageEq() {
         }
         return true;
     }
-    const setPerksToListToPrint = (id, slot) => {
-        
 
+    const setPerksToListToPrint = (id, slot) => {
         let [array, setter] = getPerksListAndSetterBySlot(selectedSlot);
 
         let kopy = [...array, id];
@@ -217,6 +217,7 @@ export function usePageEq() {
         if (slot && id) {
             let [array, setter] = getPerksListAndSetterBySlot(slot);
             let kopy = [...array].filter((i) => i != id);
+            console.log(kopy);
             setter(kopy);
             kopy = kopy
                 .concat(perksLists.helm, perksLists.armor, perksLists.weapon)
@@ -302,6 +303,7 @@ export function usePageEq() {
         let checkBox = document.getElementById('chekbox-isbgtransparent');
         setIsBacgroundTransparent(checkBox.checked);
     }
+
     const handleParseKodeClick = () => {
         let text = document.getElementById('kode-input').value;
         let kode = useKodeParse(text,
@@ -309,7 +311,8 @@ export function usePageEq() {
             setSelectedFraction,
             setListToPrint,
             selectPerksListToPrint,
-            selectedSlot, selectedFraction, setEquipmentData, setCurrentBuildType);
+            selectedSlot, selectedFraction, setEquipmentData, setCurrentBuildType
+        );
     }
 
     useEffect(() => {
@@ -318,7 +321,7 @@ export function usePageEq() {
 
     useEffect(() => {
         setKodes((last) => {
-            let kode = generateKode(perksLists, equipmentData);
+            let kode = generateKode(perksLists, equipmentData, currentBuildType);
             return {
                 ...last,
                 kode: kode,
@@ -332,8 +335,8 @@ export function usePageEq() {
         setPerksLists((last) => ({ ...last, all: [].concat(perksLists.helm, perksLists.armor, perksLists.weapon) }))
     }, [perksLists.helm, perksLists.armor, perksLists.weapon])
 
-    let [currentBuildType, setCurrentBuildType] = useState(BUILD_TYPE_PERKS_AND_EQUIPMENT);
-
+    // let [currentBuildType, setCurrentBuildType] = useState(BUILD_TYPE_PERKS_AND_EQUIPMENT);
+    let [currentBuildType, setCurrentBuildType] = useState(BUILD_TYPE_ONLY_PERKS);
 
     const selectBuildType = (type) => {
         setCurrentBuildType(type);
@@ -403,15 +406,15 @@ function checkAllItemsInSlotSumisnist(slot, type, id, perksLists, equipmentData)
 }
 
 
-function generateKode(perksLists, equipmentData = null) {
-    const isEquipmentData = (equipmentData) ? Object.values(equipmentData)?.filter(i => i).length > 0 : false;
-    let kode = isEquipmentData ? "pai_" : "op_";
+function generateKode(perksLists, equipmentData, currentBuildType) {
+    // const isEquipmentData = (equipmentData) ? Object.values(equipmentData)?.filter(i => i).length > 0 : false;
+    let kode = (currentBuildType === BUILD_TYPE_PERKS_AND_EQUIPMENT) ? "pai_" : "op_";
 
     // let kode =  "op_";
     kode += `h${perksLists.helm.join("_")}__`;
     kode += `a${perksLists.armor.join("_")}__`;
     kode += `w${perksLists.weapon.join("_")}`;
-    if (isEquipmentData) {
+    if (currentBuildType === BUILD_TYPE_PERKS_AND_EQUIPMENT) {
         kode += `__h${equipmentData.equipmentIdHelm ?? ""}`;
         kode += `__a${equipmentData.equipmentIdArmor ?? ""}`
         if (equipmentData.specialMoveIdArmor)

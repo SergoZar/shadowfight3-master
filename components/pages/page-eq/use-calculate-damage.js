@@ -29,7 +29,7 @@ export function useCalculateDamage(damages, setDamages, perksLists) {
         maxDamage += damages.baseDamage * bonus.damage[1];
 
     const round = (n) => parseInt(n * 100) / 100;
-
+    
     setDamages((l) => {
         return {
             ...l,

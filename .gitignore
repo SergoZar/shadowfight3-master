@@ -1,3 +1,11 @@
+1
 1/*
+nppBackup
 nppBackup/*
+node_modules
 node_modules/*
+out
+out/*
+.next
+.next/*
+*nppBackup*

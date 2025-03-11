@@ -544,7 +544,10 @@ export const DATA_PERKS = [
         "fraction": "legion",
         "rarity": "rare",
         "id": 60,
-        "slot": "helm"
+        "slot": "helm",
+        "bonuses":{
+            
+        }
     },
     {
         "name": "",
@@ -782,7 +785,13 @@ export const DATA_PERKS = [
         "fraction": "legion",
         "rarity": "rare",
         "id": 88,
-        "slot": "armor"
+        "slot": "armor",
+        "bonuses": {
+            "chance": [0.25, 0.5],
+            "defense": [0.2, 0.35],
+            "you": true,
+            "time": [3, 5]
+        }
     },
     {
         "name": "",

@@ -59,7 +59,6 @@ export function PageEq(){
     }
 
 
-
     return (
 
     <div className="page-eq-st-container">

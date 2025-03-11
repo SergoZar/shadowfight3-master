@@ -60,7 +60,14 @@ export function getEquipmentItemsByMove(move){
             list = DATA_ARMORS.filter((a) => a.fraction === move.fraction);
         break;
         case SLOT_WEAPON:
-            list = DATA_WEAPONS.filter((w) => move.for.includes(w.weapon_type));
+            list = DATA_WEAPONS.filter((w) => {
+                console.log(w, move)
+                if (typeof move.for === "string")
+                    return move.for === w.weapon_type
+                if (move.for?.[0]) 
+                    return move.for?.includes(w.weapon_type)
+                return []
+        });
         break;
     }
     return list;

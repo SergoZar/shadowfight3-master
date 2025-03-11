@@ -25,8 +25,17 @@ export function getMoveById(id){
 }
 
 export function getMovesToWeapon(for_=null) {
-    if (for_)
-        return DATA_MOVES.filter((m) => m.for.includes(for_.weapon_type))
+    if (for_){
+        return DATA_MOVES.filter((m) => {
+            console.log(m, for_)
+            if (typeof m.for === "string")
+                return m.for === for_.weapon_type
+            if (m.for?.[0]) 
+                return m.for?.includes(for_.weapon_type)
+            return []
+        });
+            
+    }
     return DATA_MOVES.filter((m) => !m.for.includes("armor"))
 }
 
