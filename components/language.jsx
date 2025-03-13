@@ -7,10 +7,10 @@ import {LANG_RU} from './data/data-lang-ru.js';
 export function GetLocalisationString({text}){
     let [lang, setLang] = useState(LANG_EN);
     
-    // useEffect(()=>{
-    //     if(["uk-UA", "uk", "ru-RU", "ru"].includes(navigator.language))
-    //         setLang(LANG_RU);
-    // }, []);
+    useEffect(()=>{
+        if(["uk-UA", "uk", "ru-RU", "ru"].includes(navigator.language))
+            setLang(LANG_RU);
+    }, []);
     
     return (
         <>
