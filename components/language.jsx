@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import {LANG_EN} from './data/data-lang-en.js';
 import {LANG_RU} from './data/data-lang-ru.js';
 
-// let LANG = LANG_EN;
-
 
 function isRu(){
     return ["uk-UA", "uk", "ru-RU", "ru"].includes(navigator.language);
