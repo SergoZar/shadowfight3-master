@@ -4,11 +4,16 @@ import {LANG_RU} from './data/data-lang-ru.js';
 
 // let LANG = LANG_EN;
 
+
+function isRu(){
+    return ["uk-UA", "uk", "ru-RU", "ru"].includes(navigator.language);
+}
+
 export function GetLocalisationString({text}){
     let [lang, setLang] = useState(LANG_EN);
     
     useEffect(()=>{
-        if(["uk-UA", "uk", "ru-RU", "ru"].includes(navigator.language))
+        if(isRu())
             setLang(LANG_RU);
     }, []);
     
@@ -22,7 +27,7 @@ export function GetLocalisationString({text}){
 export function getLocalisationStringFunction(text){
     let lang = LANG_EN;
     
-    if(["uk-UA", "uk", "ru-RU", "ru"].includes(navigator.language))
+    if(isRu())
         lang = LANG_RU;
 
     return ((!!lang[text]) ? lang[text] : "Hz string translation")
