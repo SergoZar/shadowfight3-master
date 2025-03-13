@@ -217,7 +217,7 @@ export function usePageEq() {
         if (slot && id) {
             let [array, setter] = getPerksListAndSetterBySlot(slot);
             let kopy = [...array].filter((i) => i != id);
-            console.log(kopy);
+            // console.log(kopy);
             setter(kopy);
             kopy = kopy
                 .concat(perksLists.helm, perksLists.armor, perksLists.weapon)
@@ -226,6 +226,7 @@ export function usePageEq() {
             kopy = getPerksByFraction(selectedFraction, kopy);
             setListType(CARD_TYPE_PERK);
             setListToPrint(kopy);
+            setActive(false);
         }
     }
 
@@ -235,6 +236,7 @@ export function usePageEq() {
             specialMoveIdArmor : (slot === SLOT_ARMOR) ? null : last.specialMoveIdArmor,
             specialMoveIdWeapon: (slot === SLOT_WEAPON) ? null : last.specialMoveIdWeapon,
         }))
+        setActive(false);
         // setListToPrintItems(slot, selectedFraction, null)
     }
 
@@ -246,6 +248,7 @@ export function usePageEq() {
             equipmentIdWeapon: (slot === SLOT_WEAPON) ? null : last.equipmentIdWeapon,
             equipmentIdRanged: (slot === SLOT_RANGED) ? null : last.equipmentIdRanged,
         }));
+        setActive(false);
     }
 
     const urlKodeParse = () => {
@@ -288,12 +291,10 @@ export function usePageEq() {
     };
 
     let [damages, setDamages] = useState(() => ({
-        baseDamage: 100,
-        midDamagePer10: 100,
-        midDamagePer100: 100,
-        sumDamagePer10: 100 * 10,
-        sumDamagePer100: 100 * 100,
-        maxDamage: 100
+        baseDamage:  100,
+        maxDamage: 100,
+        damagesPer10: [],
+        damagesPer100: []
     }));
 
 
@@ -342,6 +343,10 @@ export function usePageEq() {
         setCurrentBuildType(type);
     }
 
+    const handleRecalculateDamages = () => {
+        useCalculateDamage(damages, setDamages, perksLists);
+    }
+
     return {
         kodes,
         selectFraction,
@@ -363,6 +368,7 @@ export function usePageEq() {
         selectBuildType,
         handleSetEquipmentItemClick,
         handleSetSpecialMove,
+        handleRecalculateDamages,
         damages
     }
 }
@@ -373,15 +379,15 @@ function checkAllItemsInSlotSumisnist(slot, type, id, perksLists, equipmentData)
         let item = getEquipmentItemByIdAndSlot((type === CARD_TYPE_ITEM) ? id : itemId, slot);
         let move = getMoveById((type === CARD_TYPE_MOVE) ? id : moveId );
         let perk = getPerkById((type === CARD_TYPE_PERK) ? id : perkId );
-        console.log(slot, type, id)
-        console.log(slot,"ids","i", itemId, "m", moveId, "p", perkId)
-        console.log(slot,"i", item, "m", move, "p", perk)
+        // console.log(slot, type, id)
+        // console.log(slot,"ids","i", itemId, "m", moveId, "p", perkId)
+        // console.log(slot,"i", item, "m", move, "p", perk)
         if (item && move && perk)
             return item.fraction === perk.fraction && perk.fraction === move.fraction;
         else if (item && move)
             return item.fraction === move.fraction;
         else if (item && perk){
-            console.log("wtf", item.fraction, perk.fraction, item.fraction === perk.fraction)
+            // console.log("wtf", item.fraction, perk.fraction, item.fraction === perk.fraction)
             return item.fraction === perk.fraction;
         }
         else if (move && perk)
@@ -401,7 +407,7 @@ function checkAllItemsInSlotSumisnist(slot, type, id, perksLists, equipmentData)
             isNorm = isOneFraction(perksLists.weapon[0], equipmentData.equipmentIdWeapon, equipmentData.specialMoveIdWeapon)
             break;
     }
-    console.log("isnorm", isNorm)
+    // console.log("isnorm", isNorm)
     return isNorm;
 }
 

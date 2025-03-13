@@ -45,5 +45,12 @@ export const LANG_EN = {
     "Cуммарный урон за 100 ударов:": "Total Damage per 100 Hits:",
     "Снаряжение без сетов": "Equipment without sets",
     "Сеты": "Sets",
-	"Не доступное": "Unavailable"
+	"Не доступное": "Unavailable",
+
+    "Базовый урон": "Base Damage",
+    "Суммарный урон": "Summary damage",
+    "Суммарный урон за все удары": "Total Damage per all Hits",
+    "Таблица урона за 10 ударов": "Table total Damage per 10 Hits:",
+    "Таблица урона за 100 ударов": "Table total Damage per 100 Hits:",
+    "Пересчитать": "Recalculate"
 };

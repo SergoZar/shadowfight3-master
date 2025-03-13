@@ -5,6 +5,7 @@ import { GetLocalisationString } from "../../language";
 import { UIRadioSelector } from "../../ui/ui-radio-selector";
 import html2canvas from "../../../public/lib/html2canvas.min";
 import { BUILD_TYPE_ONLY_PERKS, BUILD_TYPE_PERKS_AND_EQUIPMENT } from "./_constants";
+import { UIButton } from "../../ui/ui-button";
 
 
 
@@ -99,24 +100,25 @@ export function _PageEqHeader({kodes, selectFraction, selectedFraction, handleCh
                 <div className="huy">
                     <span className="nowrap"><GetLocalisationString text="Код сборки:"/></span> 
                     <input id="kode-kopy-input" value={kodes.kode} readOnly/> 
-                    <button onClick={handleCopyCodeClick}><GetLocalisationString text="Копировать"/></button>
+                    <UIButton onClick={handleCopyCodeClick} text=<GetLocalisationString text="Копировать"/> />
                 </div>
                 <div className="huy">
                     <span className="nowrap"><GetLocalisationString text="Вставь код сборки:"/></span>  
                     <input id="kode-input" type="text"/> 
-                    <button onClick={handleParseKodeClick}><GetLocalisationString text="Собрать"/></button>
+                    <UIButton onClick={handleParseKodeClick} text=<GetLocalisationString text="Собрать"/> />
                 </div>
             </div>
             <div className="kode-manipulation">
                 <div className="huy">
                     <span className="nowrap"><GetLocalisationString text="Ссылка сборки:"/></span> 
                     <input id="url-kode-kopy-input" value={kodes.urlKode} readOnly/> 
-                    <button onClick={handleCopyUrlCodeClick}><GetLocalisationString text="Копировать"/></button>
+                    <UIButton onClick={handleCopyUrlCodeClick} text=<GetLocalisationString text="Копировать"/> />
                 </div>
             </div>
             <div className="kode-manipulation">
                 <div className="huy">
-                    <button onClick={toImage}><GetLocalisationString text="В картинку"/></button>
+                    <UIButton onClick={toImage} text=<GetLocalisationString text="В картинку"/> />
+                    {/*<button onClick={toImage}><GetLocalisationString text="В картинку"/></button>*/}
                     <label htmlFor="chekbox-isbgtransparent" onClick={handleCheckBoxClick}>
                     <input id="chekbox-isbgtransparent" type="checkbox"/> 
                     <span className="nowrap"><GetLocalisationString text="Прозрачный фон"/></span> </label>

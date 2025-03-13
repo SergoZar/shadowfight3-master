@@ -56,6 +56,7 @@ function getCard(item, type){
             cardId={item.id}
             slot={item.slot} 
             isUnavailable={item.unavailable}
+            isCalculate={!!item.bonuses}
         />
     )
 }

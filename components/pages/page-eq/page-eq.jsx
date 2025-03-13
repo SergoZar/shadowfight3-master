@@ -30,6 +30,7 @@ export function PageEq(){
         currentBuildType,
         handleSetEquipmentItemClick,
         handleSetSpecialMove,
+        handleRecalculateDamages,
         damages
     } = usePageEq();        
 
@@ -83,6 +84,7 @@ export function PageEq(){
             <_PageEqStInfo 
                 className="grid-area-c"
                 damages={damages}
+                handleRecalculateDamages={handleRecalculateDamages}
             />
         </main>
     </div>

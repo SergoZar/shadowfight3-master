@@ -1,7 +1,7 @@
 import { CARD_TYPE_ITEM, CARD_TYPE_MOVE, CARD_TYPE_NONE, CARD_TYPE_PERK, CARD_TYPE_WITHOUT_SET_ITEM, FRACTION_DYNASTY, FRACTION_HERALDS, FRACTION_LEGION, RARITY_COMMON, RARITY_EPIC, RARITY_LEGENDARY, RARITY_RARE, RARITY_UNIQUE, RIGHT_TOP_ICON_TYPE_SHADOW_ABILITY, RIGHT_TOP_ICON_TYPE_SLOT, SLOT_ARMOR, SLOT_HELM, SLOT_RANGED, SLOT_WEAPON } from "../constants";
 import { superRandomKey } from "../super-random-key";
 
-export function UICard({name, rarity, type, fraction, icon, cardId=null, slot=null, shadowAbility=null, additionalShadowAbilities=null, isUnavailable, onClick}){
+export function UICard({name, rarity, type, fraction, icon, cardId, slot, shadowAbility, additionalShadowAbilities, isUnavailable, onClick, isCalculate}){
     let klas = "card " + rarity;
 
     let isShowSlotIcon = !shadowAbility && !([CARD_TYPE_ITEM, CARD_TYPE_WITHOUT_SET_ITEM].includes(type) && rarity === RARITY_COMMON) && !isUnavailable
@@ -16,6 +16,7 @@ export function UICard({name, rarity, type, fraction, icon, cardId=null, slot=nu
                 <FractionIcon fraction={fraction}/>
                 <div className="card--right-top-icons-list">
                     {(isShowSlotIcon) ? <CardSlotIcon slot={slot}/> : null}
+                    {(isCalculate) ?  <img  className="card-right-top-icon" src="img_webp/calculator1.webp" /> : null}
                     <CardShadowAbilityIcon ability={shadowAbility}/>
                     <CardAdditionalShadowAbilitiesIcons additionalShadowAbilities={additionalShadowAbilities}/>
                 </div>

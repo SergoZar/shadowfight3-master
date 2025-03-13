@@ -545,9 +545,9 @@ export const DATA_PERKS = [
         "rarity": "rare",
         "id": 60,
         "slot": "helm",
-        "bonuses":{
+        // "bonuses":{
             
-        }
+        // }
     },
     {
         "name": "",
@@ -786,12 +786,12 @@ export const DATA_PERKS = [
         "rarity": "rare",
         "id": 88,
         "slot": "armor",
-        "bonuses": {
-            "chance": [0.25, 0.5],
-            "defense": [0.2, 0.35],
-            "you": true,
-            "time": [3, 5]
-        }
+        // "bonuses": {
+        //     "chance": [0.25, 0.5],
+        //     "defense": [0.2, 0.35],
+        //     "you": true,
+        //     "time": [3, 5]
+        // }
     },
     {
         "name": "",
@@ -939,13 +939,13 @@ export const DATA_PERKS = [
         "rarity": "rare",
         "id": 106,
         "slot": "weapon",
-        "bonuses": {
-            "damage": [0.1,0.3],
-            "if": {
-                "health<n": [0.2, 0.5],
-                "health_you": true
-            }
-        }
+        // "bonuses": {
+        //     "damage": [0.1,0.3],
+        //     "if": {
+        //         "health<n": [0.2, 0.5],
+        //         "health_you": true
+        //     }
+        // }
     },
     {
         "name": "",
