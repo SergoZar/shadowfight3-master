@@ -8,7 +8,6 @@ import { BUILD_TYPE_ONLY_PERKS, BUILD_TYPE_PERKS_AND_EQUIPMENT } from "./_consta
 import { UIButton } from "../../ui/ui-button";
 
 
-
 export function _PageEqHeader({kodes, selectFraction, selectedFraction, handleCheckBoxClick, handleParseKodeClick, selectBuildType, currentBuildType}){
     let [activeId, setActiveId] = useState(null);
     
