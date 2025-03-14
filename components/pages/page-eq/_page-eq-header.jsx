@@ -36,7 +36,7 @@ export function _PageEqHeader({kodes, selectFraction, selectedFraction, handleCh
         html2canvas(target, {backgroundColor: null}).then(canvas => {
             const a = document.createElement("a");
             a.href = canvas.toDataURL("image/png", 1);
-            a.download = `sf3_fit__${kodes.kode}__.png`;
+            a.download = `sf3_buid__${kodes.kode}__.png`;
             a.click();
             a.remove();
         }).catch((err) => {

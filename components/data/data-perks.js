@@ -36,11 +36,12 @@ let bonuses_example = {
     // -1 - нема межі очок
     "points": [-1, -1], // -1 = unlimited points
     
-    "defence": [0.1, 0.15], // defence 
+    "defence": [0.1, 0.15], // захист 
 
     ////// умови спрацювання
     "chance": [0.1, 0.15], // min 10% max 15%
     "per_point": true, // true/false
+
     // умова спрацювання перку, якщо це не шанс і не очки
     "if": {
         "hp<n": [0.2, 0.5], // 1 lvl hp lower than 20%, 10 lvl hp lower than 50%
@@ -48,6 +49,22 @@ let bonuses_example = {
         //
     },
     "convert_damage_to_shadow_damage": true 
+}
+
+
+let bonuses_example2 = {
+    "if": {
+        "chance": [0.1, 0.15],
+        "points": [3, 6],
+        "range": ['?'],
+        "hp<n": true,
+    },
+    "bonus_type": "damage" | "shadow_damage" | "defence" | "hp" | "shadow_energy",
+    "for_you": true | false,
+    "multiplier": [0.65, 0.86] | [-0.1, -0.15],
+    "other": {
+        "?": "?"
+    }
 }
 
 
