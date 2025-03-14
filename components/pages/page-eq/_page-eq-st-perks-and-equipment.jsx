@@ -128,11 +128,7 @@ function EquipmentRow({
             let item = getEquipmentItemByIdAndSlot(equipmentIdItem, slot);
             if (item.rarity === RARITY_EPIC)
                 minus = 1
-            else if(item.rarity === RARITY_RARE){
-                minus = 1
-                minus_helm = 1
-            }
-            else if (item.rarity === RARITY_COMMON){
+            else if(item.rarity === RARITY_RARE || item.rarity === RARITY_COMMON){
                 minus = 2
                 minus_helm = 1
             }
