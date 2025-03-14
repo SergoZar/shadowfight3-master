@@ -23,7 +23,7 @@ export function Site(){
                     <GetLocalisationString text="Домашняя страница"/>, 
                     <GetLocalisationString text="Сборка"/>, 
                     <GetLocalisationString text="Список вещей"/>, 
-                    "Реккомендации", 
+                    "Рекомендации", 
                     <GetLocalisationString text="О сайте"/>
                 ]}
                 onClicks={[

@@ -135,10 +135,13 @@ function EquipmentRow({
         }
 
         if (slot === SLOT_ARMOR || slot === SLOT_WEAPON){
-            return generatePerksPlaceholderList(3 - minus - perksList.length)
+            let count = 3 - minus - perksList.length
+            return generatePerksPlaceholderList((count >= 0) ? count : 0 )
         }
-        else if (slot === SLOT_HELM)
-            return generatePerksPlaceholderList(2 - minus_helm - perksList.length)
+        else if (slot === SLOT_HELM){
+            let count = 2 - minus_helm - perksList.length;
+            return generatePerksPlaceholderList((count >= 0) ? count : 0)
+        }
         return null
     };
 
