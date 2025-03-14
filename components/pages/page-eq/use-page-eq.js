@@ -243,8 +243,8 @@ export function usePageEq() {
     const handleRemoveEqipmentItemClick = (slot) => {
         setEquipmentData((last) => ({
             ...last,
-            equipmentIdHelm  : (slot === SLOT_HELM)   ? null : last.equipmentIdHelm,
-            equipmentIdArmor : (slot === SLOT_ARMOR)  ? null : last.equipmentIdArmor,
+            equipmentIdHelm  : (slot === SLOT_HELM  ) ? null : last.equipmentIdHelm,
+            equipmentIdArmor : (slot === SLOT_ARMOR ) ? null : last.equipmentIdArmor,
             equipmentIdWeapon: (slot === SLOT_WEAPON) ? null : last.equipmentIdWeapon,
             equipmentIdRanged: (slot === SLOT_RANGED) ? null : last.equipmentIdRanged,
         }));
@@ -255,6 +255,7 @@ export function usePageEq() {
         let url = new URL(document.URL);
         let kode_op = url.searchParams.get("op");
         let kode_b = url.searchParams.get("b");
+        // console.log(kode_b)
         if (kode_op || kode_b)
             useKodeParse(
                 kode_op || kode_b,
@@ -329,7 +330,7 @@ export function usePageEq() {
                 urlKode: generateUrlKode(kode)
             }
         })
-        useCalculateDamage(damages, setDamages, perksLists);
+        // useCalculateDamage(damages, setDamages, perksLists);
     }, [equipmentData, perksLists])
 
     useEffect(() => {

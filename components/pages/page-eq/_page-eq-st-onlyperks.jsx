@@ -26,17 +26,17 @@ export function CardsRow({ array = [], onClick = null, maxCards = 3, handleRemov
         return <UICardPlaceholder key={superRandomKey()} onClick={onClick} />;
     };
     let cards = Array(cards_count).fill(null).map(() => generatePlaceholder());
-    let a = array.map((item) => <UICard
-        key={superRandomKey()}
-        name={item.name}
-        type={CARD_TYPE_PERK}
-        rarity={item.rarity}
-        fraction={item.fraction}
-        icon={item.icon}
-        cardId={item.id}
-        slot={item.slot}
-        onClick={() => {handleRemovePerkClick(item.id, item.slot)}}
-     />);
+    let a = array.map((item) => (<UICard
+            key={superRandomKey()}
+            name={item.name}
+            type={CARD_TYPE_PERK}
+            rarity={item.rarity}
+            fraction={item.fraction}
+            icon={item.icon}
+            cardId={item.id}
+            slot={item.slot}
+            onClick={() => {handleRemovePerkClick(item.id, item.slot)}}
+        />));
 
     return (
         <div className="cards-row">
@@ -44,3 +44,56 @@ export function CardsRow({ array = [], onClick = null, maxCards = 3, handleRemov
         </div>
     );
 }
+
+/*
+
+<div className="alternatives-perks-container">
+        <UICard
+            key={superRandomKey()}
+            name={item.name}
+            type={CARD_TYPE_PERK}
+            rarity={item.rarity}
+            fraction={item.fraction}
+            icon={item.icon}
+            cardId={item.id}
+            slot={item.slot}
+            onClick={() => {handleRemovePerkClick(item.id, item.slot)}}
+        />
+        <UICard
+            key={superRandomKey()}
+            name={item.name}
+            type={CARD_TYPE_PERK}
+            rarity={item.rarity}
+            fraction={item.fraction}
+            icon={item.icon}
+            cardId={item.id}
+            slot={item.slot}
+            onClick={() => {handleRemovePerkClick(item.id, item.slot)}}
+        />
+        <UICard
+            key={superRandomKey()}
+            name={item.name}
+            type={CARD_TYPE_PERK}
+            rarity={item.rarity}
+            fraction={item.fraction}
+            icon={item.icon}
+            cardId={item.id}
+            slot={item.slot}
+            onClick={() => {handleRemovePerkClick(item.id, item.slot)}}
+        />
+        <UICard
+            key={superRandomKey()}
+            name={item.name}
+            type={CARD_TYPE_PERK}
+            rarity={item.rarity}
+            fraction={item.fraction}
+            icon={item.icon}
+            cardId={item.id}
+            slot={item.slot}
+            onClick={() => {handleRemovePerkClick(item.id, item.slot)}}
+        />
+        
+    </div>
+
+
+*/

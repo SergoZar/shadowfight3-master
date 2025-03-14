@@ -61,7 +61,7 @@ export function getEquipmentItemsByMove(move){
         break;
         case SLOT_WEAPON:
             list = DATA_WEAPONS.filter((w) => {
-                console.log(w, move)
+                // console.log(w, move)
                 if (typeof move.for === "string")
                     return move.for === w.weapon_type
                 if (move.for?.[0]) 

@@ -5,9 +5,9 @@ export function PageAbout(){
             <h3>Сайт чтобы делится сборками перков</h3>
             <hr/>
             <p>Author: SergoZar</p>
-            <p>Donation: ...</p>
+            <p>Donate: ...</p>
             <p>
-                Repo(Please put a star(: ): <a href="https://github.com/SergoZar/shadowfight3-master">https://github.com/SergoZar/shadowfight3-test</a>
+                Repo. Please put a star(: : <a href="https://github.com/SergoZar/shadowfight3-master">https://github.com/SergoZar/shadowfight3-master</a>
             </p>
             <p>
                 Github:<a href="https://github.com/sergozar">https://github.com/sergozar</a>

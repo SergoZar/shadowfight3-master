@@ -20,8 +20,11 @@
     --color-unavailable-item: rgb(181, 150, 239);
     --link-color: white;
     --card-shadow-color: white;
-    --card-width: 200px;
-    --card-height:calc(var(--card-width) * 1.37);
+    --default-card-width: 200px;
+    --default-card-height: calc(var(--card-width) * 1.37);
+    --card-width: var(--default-card-width);
+    --card-height: var(--default-card-height);
+    
     --card-margin: 10px;
     --bg-color: rgb(29, 42, 59);
 
@@ -400,7 +403,7 @@ a[data-active=true] {
     min-width: var(--width);
     max-width: var(--width);
     --height: calc(var(--card-height) * 3 + var(--card-margin) * 6 + 4px);
-    max-height: var(--height);
+/*    max-height: var(--height);*/
 /*    max-width: 722px;*/
     
 }
@@ -423,6 +426,19 @@ a[data-active=true] {
 
 .page-eq-st__only-perks>.cards-row {
     justify-content: center;
+}
+
+.alternatives-perks-container{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    --card-width: calc(var(--default-card-width) / 2 - 1px);
+/*    --card-width: calc(var(--default-card-height) / 2);*/
+
+    --card-height: calc(var(--card-width) * 1.37)
+}
+
+.alternatives-perks-container .card{
+    margin: 5px;
 }
 
 button.card-placeholder {

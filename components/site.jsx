@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { PAGE_HOME, PAGE_EQUIPMENT, PAGE_EQUIPMENT_LIST, PAGE_ABOUT} from './constants.js';
+import { PAGE_HOME, PAGE_EQUIPMENT, PAGE_EQUIPMENT_LIST, PAGE_ABOUT, PAGE_RECCOMENDATIONS} from './constants.js';
 import { UIRadioSelector } from './ui/ui-radio-selector.jsx';
 import { GetLocalisationString} from './language.jsx';
 import {PageAbout, PageEq, PageEqList, PageHome} from './pages';
@@ -23,15 +23,18 @@ export function Site(){
                     <GetLocalisationString text="Домашняя страница"/>, 
                     <GetLocalisationString text="Сборка"/>, 
                     <GetLocalisationString text="Список вещей"/>, 
+                    "Реккомендации", 
                     <GetLocalisationString text="О сайте"/>
                 ]}
                 onClicks={[
                     ()=>handlePageClick(PAGE_HOME),
                     ()=>handlePageClick(PAGE_EQUIPMENT),
                     ()=>handlePageClick(PAGE_EQUIPMENT_LIST),
+                    ()=>handlePageClick(PAGE_RECCOMENDATIONS),
                     ()=>handlePageClick(PAGE_ABOUT)
                 ]}
-                defaultActiveId={[PAGE_HOME, PAGE_EQUIPMENT, PAGE_EQUIPMENT_LIST, PAGE_ABOUT].findIndex((i) => i === page)}
+                defaultActiveId={[PAGE_HOME, PAGE_EQUIPMENT, PAGE_EQUIPMENT_LIST, PAGE_RECCOMENDATIONS, PAGE_ABOUT].findIndex((i) => i === page)}
+                unavailableIds={[3]}
                 />
             </nav>
         </header>

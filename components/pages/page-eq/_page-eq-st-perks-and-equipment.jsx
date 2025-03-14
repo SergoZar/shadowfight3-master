@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import { CARD_PLACEHOLDER_TYPE_ITEM, CARD_TYPE_ITEM, CARD_TYPE_MOVE, CARD_TYPE_PERK, SLOT_ARMOR, SLOT_HELM, SLOT_RANGED, SLOT_WEAPON } from "../../constants";
+import { CARD_PLACEHOLDER_TYPE_ITEM, CARD_TYPE_ITEM, CARD_TYPE_MOVE, CARD_TYPE_PERK, RARITY_COMMON, RARITY_EPIC, RARITY_RARE, SLOT_ARMOR, SLOT_HELM, SLOT_RANGED, SLOT_WEAPON } from "../../constants";
 import { getPerksByIds } from "../../perks-functions";
 import { UICardPlaceholder } from "../../ui/ui-card-placeholder";
 import { superRandomKey } from "../../super-random-key";
@@ -91,6 +91,10 @@ function EquipmentRow({
     handleRemoveEqipmentItemClick
 }){
     const specialMoveSlot = () => {
+        if (equipmentIdItem){
+            let item = getEquipmentItemByIdAndSlot(equipmentIdItem, slot);
+            if (item.rarity === RARITY_COMMON) return null;
+        }
         if (slot === SLOT_ARMOR || slot === SLOT_WEAPON)
             return (
                 <>
@@ -117,10 +121,28 @@ function EquipmentRow({
         ></button>)
     
     const perksSlots = () => {
-        if (slot === SLOT_ARMOR || slot === SLOT_WEAPON)
-            return generatePerksPlaceholderList(3 - perksList.length)
+        let minus = 0;
+        let minus_helm = 0;
+        
+        if (equipmentIdItem){
+            let item = getEquipmentItemByIdAndSlot(equipmentIdItem, slot);
+            if (item.rarity === RARITY_EPIC)
+                minus = 1
+            else if(item.rarity === RARITY_RARE){
+                minus = 1
+                minus_helm = 1
+            }
+            else if (item.rarity === RARITY_COMMON){
+                minus = 2
+                minus_helm = 1
+            }
+        }
+
+        if (slot === SLOT_ARMOR || slot === SLOT_WEAPON){
+            return generatePerksPlaceholderList(3 - minus - perksList.length)
+        }
         else if (slot === SLOT_HELM)
-            return generatePerksPlaceholderList(2 - perksList.length)
+            return generatePerksPlaceholderList(2 - minus_helm - perksList.length)
         return null
     };
 

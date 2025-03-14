@@ -75,7 +75,7 @@ export function PageEqList(){
                 }
 
                 disabled = disabled_to_ints(disabled);
-                console.log("d", disabled)
+                // console.log("d", disabled)
 
                 return {
                 ...last,

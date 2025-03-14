@@ -24,6 +24,7 @@ export const PAGE_HOME = "home";
 export const PAGE_EQUIPMENT = "equipment";
 export const PAGE_EQUIPMENT_LIST = "equipment-list";
 export const PAGE_ABOUT = "about";
+export const PAGE_RECCOMENDATIONS = "recommendations";
 
 export const RIGHT_TOP_ICON_TYPE_SLOT = "slot";
 export const RIGHT_TOP_ICON_TYPE_SHADOW_ABILITY = "shadow-ability";
