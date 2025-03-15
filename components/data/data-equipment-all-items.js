@@ -2199,7 +2199,7 @@ export const DATA_HELMS = [
         "slot": "helm",
         "icon": "img_webp/equipment/helm/helm__str_45.webp",
         "id": 122,
-        "shadow_ability": DATA_SHADOW_ABILITIES[98]
+        "shadow_ability": DATA_SHADOW_ABILITIES[87]
     }
 ];
 
