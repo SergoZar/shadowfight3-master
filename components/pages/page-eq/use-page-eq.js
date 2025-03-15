@@ -330,7 +330,7 @@ export function usePageEq() {
                 urlKode: generateUrlKode(kode)
             }
         })
-        // useCalculateDamage(damages, setDamages, perksLists);
+        useCalculateDamage(damages, setDamages, perksLists);
     }, [equipmentData, perksLists])
 
     useEffect(() => {
