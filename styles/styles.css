@@ -21,7 +21,7 @@
     --link-color: white;
     --card-shadow-color: white;
     --default-card-width: 200px;
-    --default-card-height: calc(var(--card-width) * 1.37);
+    --default-card-height: calc(var(--default-card-width) * 1.37);
     --card-width: var(--default-card-width);
     --card-height: var(--default-card-height);
     
