@@ -431,10 +431,10 @@ a[data-active=true] {
 .alternatives-perks-container{
     display: grid;
     grid-template-columns: repeat(2, auto);
-    --card-width: calc(var(--default-card-width) / 2 - 1px);
+/*    --card-width: calc(var(--default-card-width) / 2 - 1px);*/
 /*    --card-width: calc(var(--default-card-height) / 2);*/
 
-    --card-height: calc(var(--card-width) * 1.37)
+/*    --card-height: calc(var(--card-width) * 1.37)*/
 }
 
 .alternatives-perks-container .card{
