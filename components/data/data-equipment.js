@@ -1499,7 +1499,25 @@ export const DATA_EQUIPMENT = {
                 "weapon" : DATA_WEAPONS[58],
                 "ranged" : DATA_RANGEDS[34],
             }
+        },
+        {
+            "name": "",
+            "icon": "",
+            "fraction": "heralds",
+            "rarity": "legendary",
+            "items": {
+                "helm" : DATA_HELMS[122],
+                "armor" : DATA_ARMORS[122],
+                "weapon" : DATA_WEAPONS[184],
+                "ranged" : DATA_RANGEDS[127],
+            },
+            "additional_shadow_abilities": {
+                "helm": [DATA_SHADOW_ABILITIES[13]],
+                "armor": [DATA_SHADOW_ABILITIES[100]],
+                "ranged": [DATA_SHADOW_ABILITIES[101]],
+            }
         }
+        
     ],
     "without_set": []
     // "without_set": [].concat(

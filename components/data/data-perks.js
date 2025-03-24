@@ -971,7 +971,34 @@ export const DATA_PERKS = [
         "rarity": "legendary",
         "id": 107,
         "slot": "weapon"
+    },
+
+
+    {
+        "name": "",
+        "icon": "img_webp/perks/ICON_PERK_DEFENCE_BREAKTHROUGH.webp",
+        "fraction": "legion",
+        "rarity": "legendary",
+        "id": 108,
+        "slot": "weapon"
+    },
+    {
+        "name": "",
+        "icon": "img_webp/perks/ICON_PERK_WISE_GENERAL.webp",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "id": 109,
+        "slot": "armor"
+    },
+    {
+        "name": "",
+        "icon": "img_webp/perks/ICON_PERK_SHADOW_CORROSION.webp",
+        "fraction": "heralds",
+        "rarity": "legendary",
+        "id": 110,
+        "slot": "weapon"
     }
+    
 ];
 
 

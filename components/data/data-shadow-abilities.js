@@ -498,5 +498,17 @@ export const DATA_SHADOW_ABILITIES = [
         "name": "",
         "icon": "img_webp/shadow_abilities/SHADOW_WHIP_KATAR_SLASH_1.webp",
         "id": 100
-    }
+    },
+
+    {
+        "name": "",
+        "icon": "img_webp/shadow_abilities/SHADOW_H19_MISTBOMB.webp",
+        "id": 101
+    },
+    {
+        "name": "",
+        "icon": "img_webp/shadow_abilities/SHADOW_H19_JUMPBACK.webp",
+        "id": 102
+    },
+    
 ];

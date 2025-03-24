@@ -1098,7 +1098,17 @@ export const DATA_ARMORS = [
         "icon": "img_webp/equipment/armor/arm__str_45.webp",
         "id": 122,
         "shadow_ability": DATA_SHADOW_ABILITIES[85]
-    }
+    },
+
+    {
+        "name": "",
+        "fraction": "heralds",
+        "rarity": "legendary",
+        "slot": "armor",
+        "icon": "img_webp/equipment/armor/arm__prc_44.webp",
+        "id": 123,
+        "shadow_ability": DATA_SHADOW_ABILITIES[50]
+    },
 ];
 
 
@@ -2200,7 +2210,17 @@ export const DATA_HELMS = [
         "icon": "img_webp/equipment/helm/helm__str_45.webp",
         "id": 122,
         "shadow_ability": DATA_SHADOW_ABILITIES[87]
-    }
+    },
+
+    {
+        "name": "",
+        "fraction": "heralds",
+        "rarity": "legendary",
+        "slot": "helm",
+        "icon": "img_webp/equipment/helm/helm__prc_44.webp",
+        "id": 123,
+        "shadow_ability": DATA_SHADOW_ABILITIES[52]
+    },
 ];
 
 export const DATA_RANGEDS = [
@@ -3349,7 +3369,16 @@ export const DATA_RANGEDS = [
         "icon": "img_webp/equipment/ranged/rng__pistol_01_06.webp",
         "id": 127,
         "shadow_ability": DATA_SHADOW_ABILITIES[75]
-    }
+    },
+    {
+        "name": "",
+        "fraction": "heralds",
+        "rarity": "legendary",
+        "slot": "ranged",
+        "icon": "img_webp/equipment/ranged/rng__shuriken_01_09.webp",
+        "id": 128,
+        "shadow_ability": DATA_SHADOW_ABILITIES[68]
+    },
 ];
 
 export const DATA_WEAPONS = [
@@ -5211,7 +5240,28 @@ export const DATA_WEAPONS = [
         "icon": "img_webp/equipment/weapon/wpn__staff_01_06.webp",
         "id": 184,
         "shadow_ability": DATA_SHADOW_ABILITIES[83]
-    }
+    },
+    {
+        "name": "",
+        "fraction": "heralds",
+        "rarity": "legendary",
+        "slot": "weapon",
+        "weapon_type": "claws",
+        "icon": "img_webp/equipment/weapon/wpn__claws_01_06.webp",
+        "id": 185,
+        "shadow_ability": DATA_SHADOW_ABILITIES[14]
+    },
+    {
+        "name": "",
+        "fraction": "heralds",
+        "rarity": "legendary",
+        "slot": "weapon",
+        "weapon_type": "claws",
+        "icon": "img_webp/equipment/weapon/wpn__claws_01_06a.webp",
+        "id": 186,
+        "shadow_ability": DATA_SHADOW_ABILITIES[14]
+    },
+    
 ];
 
 
