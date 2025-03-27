@@ -435,7 +435,8 @@ function generateKode(perksLists, equipmentData, currentBuildType) {
 }
 
 function generateUrlKode(kode) {
-    var url = new URL(document.URL);
+    // var url = new URL(document.URL);
+    var url = new URL(window.location.href.split("#")[0]);
     // b = bulid
     url.searchParams.set("b", kode);
     return url.toString();
