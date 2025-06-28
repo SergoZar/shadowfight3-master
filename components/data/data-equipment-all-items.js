@@ -1109,6 +1109,16 @@ export const DATA_ARMORS = [
         "id": 123,
         "shadow_ability": DATA_SHADOW_ABILITIES[50]
     },
+    {
+        "name": "",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "slot": "armor",
+        "icon": "img_webp/equipment/armor/arm__agl_43.webp",
+        "id": 124,
+        "shadow_ability": DATA_SHADOW_ABILITIES[1]
+    }
+    
 ];
 
 
@@ -2221,6 +2231,16 @@ export const DATA_HELMS = [
         "id": 123,
         "shadow_ability": DATA_SHADOW_ABILITIES[52]
     },
+    {
+        "name": "",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "slot": "helm",
+        "icon": "img_webp/equipment/helm/helm__agl_43.webp",
+        "id": 124,
+        "shadow_ability": DATA_SHADOW_ABILITIES[2]
+    },
+    
 ];
 
 export const DATA_RANGEDS = [
@@ -3379,6 +3399,16 @@ export const DATA_RANGEDS = [
         "id": 128,
         "shadow_ability": DATA_SHADOW_ABILITIES[68]
     },
+    {
+        "name": "",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "slot": "ranged",
+        "icon": "img_webp/equipment/ranged/rng__bow_01_05.webp",
+        "id": 129,
+        "shadow_ability": DATA_SHADOW_ABILITIES[56]
+    },
+
 ];
 
 export const DATA_WEAPONS = [
@@ -5261,6 +5291,28 @@ export const DATA_WEAPONS = [
         "id": 186,
         "shadow_ability": DATA_SHADOW_ABILITIES[14]
     },
+    {
+        "name": "",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "slot": "weapon",
+        "weapon_type": "guandao",
+        "icon": "img_webp/equipment/weapon/wpn__guandao_01_05.webp",
+        "id": 187,
+        "shadow_ability": DATA_SHADOW_ABILITIES[31]
+    },
+    {
+        "name": "",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "slot": "weapon",
+        "weapon_type": "guandao",
+        "icon": "img_webp/equipment/weapon/wpn__guandao_01_05a.webp",
+        "id": 188,
+        "shadow_ability": DATA_SHADOW_ABILITIES[31]
+    },
+    
+    
     
 ];
 

@@ -55,15 +55,27 @@ export function PageAbout(){
             </div>
             <hr/>
             <h3>Update log:</h3>
-            <h4>v0.1.2 (13.04.2025)</h4>
+
+            <h4>v0.1.4 (29.07.2025)</h4>
+            <div>
+                <ul>
+                    <li>Добавлены иконки экипировки нового сета</li>
+                    <li>Added equipment icons for the new set</li>
+                    <li>Добавлены иконки новых перков</li>
+                    <li>Added icons for new perks</li>
+                  
+                    
+                </ul>
+            </div>
+            <h4>v0.1.3 (13.04.2025)</h4>
             <div>
                 <ul>
                     <li>Добавлены две таблцицы с инфой о сработавших перках</li>
-                    <li></li>
+                    <li>Added two tables with info about triggered perks</li>
                     <li>Добалвена кнопка пересчёта урона</li>
-                    <li></li>
+                    <li>Added damage calculation button</li>
                     <li>Добавлена иконка калькулятора к тем перкам чьи бонусы считает калькулятор</li>
-                    <li></li>
+                    <li>Added calculator icon to those perks whose bonuses are calculated by the calculator</li>
                     
                 </ul>
             </div>

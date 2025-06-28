@@ -997,7 +997,33 @@ export const DATA_PERKS = [
         "rarity": "legendary",
         "id": 110,
         "slot": "weapon"
+    },
+
+    {
+        "name": "",
+        "icon": "img_webp/perks/ICON_PERK_GUARDIAN_SHIELDS.webp",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "id": 111,
+        "slot": "armor"
+    },
+    {
+        "name": "",
+        "icon": "img_webp/perks/ICON_PERK_SHADOW_CRYSTALS.webp",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "id": 112,
+        "slot": "helm"
+    },
+    {
+        "name": "",
+        "icon": "img_webp/perks/ICON_PERK_CIRCLING_COUGAR.webp",
+        "fraction": "dynasty",
+        "rarity": "legendary",
+        "id": 113,
+        "slot": "weapon"
     }
+    
     
 ];
 

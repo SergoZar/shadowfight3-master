@@ -1516,7 +1516,20 @@ export const DATA_EQUIPMENT = {
                 "armor": [DATA_SHADOW_ABILITIES[100]],
                 "ranged": [DATA_SHADOW_ABILITIES[101]],
             }
+        },
+        {
+            "name": "",
+            "icon": "",
+            "fraction": "dynasty",
+            "rarity": "legendary",
+            "items": {
+                "helm" : DATA_HELMS[123],
+                "armor" : DATA_ARMORS[123],
+                "weapon" : DATA_WEAPONS[186],
+                "ranged" : DATA_RANGEDS[128],
+            }
         }
+        
         
     ],
     "without_set": []
