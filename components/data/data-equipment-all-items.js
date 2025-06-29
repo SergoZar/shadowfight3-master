@@ -4798,7 +4798,7 @@ export const DATA_WEAPONS = [
         "weapon_type": "shield_knobstick",
         "icon": "img_webp/equipment/weapon/wpn__shield_knobstick_01_03.webp",
         "id": 137,
-        "shadow_ability": DATA_SHADOW_ABILITIES[80]
+        "shadow_ability": DATA_SHADOW_ABILITIES[79]
     },
     {
         "name": "",
@@ -4808,7 +4808,7 @@ export const DATA_WEAPONS = [
         "weapon_type": "shield_knobstick",
         "icon": "img_webp/equipment/weapon/wpn__shield_knobstick_01_04.webp",
         "id": 138,
-        "shadow_ability": DATA_SHADOW_ABILITIES[80]
+        "shadow_ability": DATA_SHADOW_ABILITIES[79]
     },
     {
         "name": "",
@@ -4818,7 +4818,7 @@ export const DATA_WEAPONS = [
         "weapon_type": "shield_knobstick",
         "icon": "img_webp/equipment/weapon/wpn__shield_knobstick_01_05.webp",
         "id": 139,
-        "shadow_ability": DATA_SHADOW_ABILITIES[80]
+        "shadow_ability": DATA_SHADOW_ABILITIES[79]
     },
     {
         "name": "",

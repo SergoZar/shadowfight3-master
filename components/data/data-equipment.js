@@ -210,7 +210,7 @@ export const DATA_EQUIPMENT = {
                 "helm" : DATA_HELMS[30],
                 "armor" : DATA_ARMORS[30],
                 "weapon" : DATA_WEAPONS[127],
-                "ranged" : DATA_RANGEDS[29],
+                "ranged" : DATA_RANGEDS[30],
             }
         },
         {
@@ -728,7 +728,7 @@ export const DATA_EQUIPMENT = {
             "items": {
                 "helm" : DATA_HELMS[100],
                 "armor" : DATA_ARMORS[100],
-                "weapon" : DATA_WEAPONS[167],
+                "weapon" : DATA_WEAPONS[163],
                 "ranged" : DATA_RANGEDS[94],
             }
         },
